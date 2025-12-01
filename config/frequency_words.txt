@@ -98,11 +98,6 @@ ai
 
 科技
 
-核能
-
-水电站
-雅鲁藏布江
-
 新质生产力
 
 月球
@@ -111,3 +106,13 @@ ai
 宇宙
 飞船
 航空
+
+前端
+vue
+react
+ReactNative
+react-native
+swift
+java
+android
+javascript

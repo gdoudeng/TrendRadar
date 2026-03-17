@@ -256,3 +256,61 @@
 
 # 产业政策
 生产力
+
+# 前端技术
+前端
+/\\bVue\\b|\\bVuex\\b|\\bPinia\\b|\\bNuxt\\b|尤雨溪/ => Vue
+/\\bReact\\b|\\bNext\\.?js\\b|\\bRedux\\b|\\bZustand\\b/ => React
+/\\bTypeScript\\b|\\bTS\\b/ => TypeScript
+/\\bJavaScript\\b|\\bES2[0-9]+\\b|\\bECMAScript\\b/ => JavaScript
+/\\bNode\\.?js\\b|\\bDeno\\b|\\bBun\\b/ => JS Runtime
+/\\bVite\\b|\\bWebpack\\b|\\bRollup\\b|\\bTurbopack\\b|\\besbuild\\b|\\bRspack\\b/ => 构建工具
+/\\bTailwind\\b|\\bCSS\\b|\\bSass\\b|\\bLess\\b/ => CSS
+/\\bSvelte\\b|\\bSvelteKit\\b|\\bSolid\\.?js\\b|\\bAstro\\b|\\bQwik\\b/ => 前端框架
+/\\bWebAssembly\\b|\\bWASM\\b/ => WebAssembly
+/\\bPWA\\b|\\bService.?Worker\\b/ => PWA
+/\\bElectron\\b|\\bTauri\\b/ => 桌面跨端
+
+# 移动端开发
+/\\biOS\\b|\\bSwiftUI\\b|\\bUIKit\\b|\\bXcode\\b|\\bTestFlight\\b|\\bApp Store\\b|\\bSwift\\b/ => iOS开发
+/\\bAndroid\\b|\\bJetpack\\b|\\bCompose\\b|\\bAndroid Studio\\b|\\bGoogle Play\\b|\\bAOSP\\b|\\bKotlin\\b/ => Android开发
+/\\bFlutter\\b|\\bDart\\b/ => Flutter
+/\\bReact.?Native\\b|\\breact-native\\b|\\bExpo\\b/ => ReactNative
+/\\bKMM\\b|\\bKMP\\b|\\bKotlin Multiplatform\\b/ => Kotlin跨平台
+/鸿蒙开发|\\bHarmonyOS\\b|\\bArkTS\\b|\\bArkUI\\b|\\bDevEco\\b/ => 鸿蒙开发
+/小程序|\\bUni-?App\\b|\\bTaro\\b|\\bWeex\\b/ => 小程序/跨端
+/\\bCocoaPods\\b|\\bSPM\\b|\\bGradle\\b|\\bFastlane\\b/ => 移动构建工具
+
+# 编程语言与工具
+/\\bRust\\b/ => Rust
+/\\bGo\\b|\\bGolang\\b/ => Go
+/\\bPython\\b/ => Python
+/\\bJava\\b(?!Script)/ => Java
+/\\bZig\\b/ => Zig
+
+# 游戏开发
+/\\bUnity\\b|\\bUnity3D\\b|\\bC#\\b/ => Unity
+/\\bUnreal\\b|\\bUE[45]\\b|虚幻引擎|\\bBlueprint\\b/ => Unreal
+/\\bGodot\\b|\\bGDScript\\b/ => Godot
+/\\bCocos\\b|\\bCocos2d\\b|\\bCocosCreator\\b/ => Cocos
+/游戏引擎|渲染引擎|物理引擎/ => 游戏引擎
+/\\bOpenGL\\b|\\bVulkan\\b|\\bDirectX\\b|\\bMetal\\b|\\bWebGL\\b|\\bWebGPU\\b/ => 图形API
+/光线追踪|光追|\\bRay.?Tracing\\b|\\bRTX\\b/ => 光线追踪
+/着色器|\\bShader\\b|\\bHLSL\\b|\\bGLSL\\b/ => Shader
+/游戏开发|独立游戏|\\bIndie\\b|\\bGameDev\\b/ => 游戏开发
+/\\bSteam\\b|\\bEpic Games\\b|\\bGame Pass\\b/ => 游戏平台
+/\\bPixel\\b|像素风|\\b2D\\b|\\b3D建模\\b|\\bBlender\\b/ => 游戏美术
+/网络同步|帧同步|状态同步|\\bNetcode\\b|\\bPhoton\\b/ => 游戏网络
+
+# 逆向工程与安全
+/逆向工程|逆向分析|反编译|反汇编/ => 逆向工程
+/\\bIDA\\b|\\bIDA Pro\\b|\\bGhidra\\b|\\bBinary Ninja\\b/ => 逆向工具
+/\\bFrida\\b|\\bXposed\\b|\\bLSPosed\\b|\\bMagisk\\b|\\bKernelSU\\b/ => Hook框架
+/脱壳|加壳|壳保护|\\bpacker\\b|\\bunpacker\\b/ => 脱壳/加壳
+/\\bAPK\\b|\\bsmali\\b|\\bjadx\\b|\\bdex2jar\\b|安卓逆向/ => 安卓逆向
+/\\bCTF\\b|夺旗赛|\\bPwn\\b|\\bROP\\b/ => CTF
+/漏洞挖掘|漏洞利用|\\bExploit\\b|\\bCVE-\\d+/ => 漏洞
+/渗透测试|红队|蓝队|\\bPentest\\b/ => 渗透测试
+/\\bOWASP\\b|\\bXSS\\b|\\bSQL注入\\b|\\bRCE\\b/ => Web安全
+/越狱|\\bjailbreak\\b|\\broot\\b|刷机|bootloader/ => 越狱/Root
+/恶意软件|木马|勒索|\\bmalware\\b|\\bransomware\\b/ => 恶意软件分析

@@ -71,8 +71,6 @@ platforms:
       name: "知乎"
     - id: "bilibili-hot-search"
       name: "bilibili 热搜"
-    - id: "linuxdo"
-      name: "LinuxDo"
 
 
 

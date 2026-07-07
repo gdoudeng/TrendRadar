@@ -1204,20 +1204,6 @@ def render_html_content(
 
             /* 快捷键面板已集成到 fab-tooltip */
 
-            /* 阅读进度条 */
-            .reading-progress {
-                position: fixed;
-                top: 0; left: 0;
-                width: 0;
-                height: 3px;
-                background: linear-gradient(90deg, #4f46e5, #7c3aed);
-                z-index: 9999;
-                transition: width 0.1s linear;
-            }
-            body.dark-mode .reading-progress {
-                background: linear-gradient(90deg, #8ab4f8, #c58af9);
-            }
-
             /* 复制按钮样式已集成到 .news-number */
 
 
@@ -1241,7 +1227,6 @@ def render_html_content(
         </style>
     </head>
     <body>
-        <div class="reading-progress"></div>
         <div class="container">
             <div class="header">
                 <div class="header-watermark">TrendRadar</div>
@@ -2175,7 +2160,6 @@ def render_html_content(
                 document.querySelectorAll('.toggle-dark-btn').forEach(function(el) {
                     el.dataset.prevDisplay = el.style.display || ''; el.style.display = 'none';
                 });
-                document.querySelectorAll('.reading-progress').forEach(function(el) { el.style.display = 'none'; });
                 document.querySelectorAll('.header-watermark').forEach(function(el) { el.style.display = 'none'; });
                 return state;
             }
@@ -2200,8 +2184,6 @@ def render_html_content(
                 document.querySelectorAll('.toggle-dark-btn').forEach(function(el) {
                     el.style.display = el.dataset.prevDisplay || ''; delete el.dataset.prevDisplay;
                 });
-                document.querySelectorAll('.reading-progress').forEach(function(el) { el.style.display = ''; });
-                document.querySelectorAll('.reading-progress').forEach(function(el) { el.style.display = ''; });
                 document.querySelectorAll('.header-watermark').forEach(function(el) { el.style.display = ''; });
                 initTabVisibility();
                 initCollapseVisibility();
@@ -2574,14 +2556,6 @@ def render_html_content(
                     }
                 });
 
-                // 阅读进度条
-                var progressBar = document.querySelector('.reading-progress');
-                if (progressBar) {
-                    window.addEventListener('scroll', function() {
-                        var h = document.documentElement.scrollHeight - window.innerHeight;
-                        progressBar.style.width = (h > 0 ? (window.scrollY / h * 100) : 0) + '%';
-                    });
-                }
 
                 // 一键复制：hover 时数字变复制图标
                 var copySvg = '<svg width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="5" y="5" width="9" height="9" rx="1.5"/><path d="M5 11H3.5A1.5 1.5 0 012 9.5v-7A1.5 1.5 0 013.5 1h7A1.5 1.5 0 0112 2.5V5"/></svg>';

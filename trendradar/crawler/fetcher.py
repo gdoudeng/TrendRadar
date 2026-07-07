@@ -48,6 +48,16 @@ class DataFetcher:
         self.proxy_url = proxy_url
         self.api_url = api_url or self.DEFAULT_API_URL
 
+        # 基于 api_url 域名动态补充 Origin/Referer 请求头。
+        # 公共实例（newsnow.busiyi.world）位于 Cloudflare 之后，会校验请求来源，
+        # 缺失这两个头会返回 403；自定义 api_url 时也会自动指向对应源。
+        self.headers = dict(self.DEFAULT_HEADERS)
+        parsed = urlparse(self.api_url)
+        if parsed.scheme and parsed.netloc:
+            origin = f"{parsed.scheme}://{parsed.netloc}"
+            self.headers["Origin"] = origin
+            self.headers["Referer"] = origin + "/"
+
     @staticmethod
     def _check_domain_safety(
         items: List[Dict],
@@ -120,7 +130,7 @@ class DataFetcher:
                 response = requests.get(
                     url,
                     proxies=proxies,
-                    headers=self.DEFAULT_HEADERS,
+                    headers=self.headers,
                     timeout=10,
                 )
                 response.raise_for_status()
